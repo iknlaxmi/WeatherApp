@@ -130,7 +130,7 @@ const CurrentForecastWeather = () => {
   useEffect(() => {
     axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${selected_location}&limit=5&appid=cabe83207bc8ff5681c118c525e4048d`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${selected_location}&limit=5&appid=cabe83207bc8ff5681c118c525e4048d`
       )
       .then((res) => {
         console.log('lat data');
