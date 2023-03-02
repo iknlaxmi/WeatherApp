@@ -1,13 +1,10 @@
 import React from 'react';
-import CurrentWeather from './components/CurrentWeather';
-import ForecastWeather from './components/ForecastWeather';
+import CurrentForecastWeather from './components/CurrentForecastWeather';
 
 function App() {
   return (
     <div className="App">
-      <CurrentWeather />
-
-      {/* <ForecastWeather /> */}
+      <CurrentForecastWeather />
     </div>
   );
 }
