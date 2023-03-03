@@ -115,10 +115,11 @@ const CurrentForecastWeather = () => {
     'Dec',
   ];
   //Get cities with given search string
+  console.log(process.env.REACT_APP_API_KEY);
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/geo/1.0/direct?q=${search_location}&limit=5&appid=cabe83207bc8ff5681c118c525e4048d`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${search_location}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         console.log('search');
@@ -130,7 +131,7 @@ const CurrentForecastWeather = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/geo/1.0/direct?q=${selected_location}&limit=5&appid=cabe83207bc8ff5681c118c525e4048d`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${selected_location}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         console.log('lat data');
@@ -144,7 +145,7 @@ const CurrentForecastWeather = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude=alerts&appid=cabe83207bc8ff5681c118c525e4048d`
+        `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude=alerts&appid=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         console.log(res.data);
