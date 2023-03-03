@@ -285,7 +285,7 @@ const CurrentForecastWeather = () => {
             <div className="flex-item">
               <img
                 className="imag-weather-type"
-                src={`http://openweathermap.org/img/wn/${currrentImg}@4x.png`}
+                src={`https://openweathermap.org/img/wn/${currrentImg}@4x.png`}
                 alt="weather"
               />
             </div>
@@ -352,7 +352,7 @@ const CurrentForecastWeather = () => {
                 )}
                 <img
                   className="forecast-img"
-                  src={`http://openweathermap.org/img/wn/${item.weather_type}@2x.png`}
+                  src={`https://openweathermap.org/img/wn/${item.weather_type}@2x.png`}
                   alt="weather"
                 />
 
